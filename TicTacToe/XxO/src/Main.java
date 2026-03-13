@@ -8,6 +8,6 @@ public class Main {
 
         Game game = new Game(p1, p2);
 
-//        Take row and column as input to continue Game
+//      Take row and column as input to continue Game
     }
 }
