@@ -13,4 +13,12 @@ public class Cell {
     public boolean isCellEmpty(int row, int col) {
         return symbol == null;
     }
+
+    public void setSymbol(Symbol symbol) {
+        this.symbol = symbol;
+    }
+
+    public Symbol getSymbol() {
+        return symbol;
+    }
 }

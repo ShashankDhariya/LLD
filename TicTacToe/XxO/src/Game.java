@@ -14,6 +14,25 @@ public class Game {
         this.board = new Board(3);
     }
 
+    public int move(int row, int col, Player player) {
+        if(row < 0 || row > 3 || col < 0 || col > 3)
+            throw new IllegalArgumentException("Invalid move");
+
+        else if(!board.isCellEmpty(row, col))
+            throw new IllegalArgumentException("Invalid move");
+
+        else if(player == null)
+            throw new IllegalArgumentException("Invalid Player");
+
+        else {
+            board.setCell(row, col, currentPlayer.getSymbol());
+
+//            checkIfWon(board);
+        }
+
+        return -1;
+    }
+
     public void switchTurn() {
         if(currentPlayer.equals(player1))
             currentPlayer = player2;

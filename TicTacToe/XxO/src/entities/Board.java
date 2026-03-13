@@ -14,4 +14,12 @@ public class Board {
             }
         }
     }
+
+    public boolean isCellEmpty(int row, int col){
+        return grid[row][col] == null;
+    }
+
+    public void setCell(int row, int col, Symbol symbol){
+        grid[row][col].setSymbol(symbol);
+    }
 }
