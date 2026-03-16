@@ -6,7 +6,7 @@ public class Payment {
 
     public Payment(double amount, PaymentStrategy strategy) {
         this.amount = amount;
-        this.strategy = strategy;
+        this.paymentStrategy = strategy;
     }
 
     public void processPayment(double amount) {
