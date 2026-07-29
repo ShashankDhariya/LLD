@@ -1,25 +1,24 @@
 package entities;
 
 public class Account {
-    private String accontNumber;
+    private final String accountNumber;
     private double balance;
 
-    public Account(String accontNumber, double balance) {
-        this.accontNumber = accontNumber;
+    public Account(String accountNumber, double balance) {
+        this.accountNumber = accountNumber;
         this.balance = balance;
     }
 
-    String getAccontNumber() {
-        return accontNumber;
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
     public double getBalance() {
         return balance;
     }
 
-    public boolean deposit(double amount) {
+    public void deposit(double amount) {
         this.balance += amount;
-        return true;
     }
 
     public boolean withdraw(double amount) {

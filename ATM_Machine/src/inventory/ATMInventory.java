@@ -7,7 +7,7 @@ import java.util.Map;
 public class ATMInventory {
     private final Map<CashType, Integer> cashInventory;
 
-    public ATMInventory(int value) {
+    public ATMInventory() {
         this.cashInventory = new HashMap<CashType, Integer>();
 
 //        Added Cash to ATM
@@ -23,7 +23,7 @@ public class ATMInventory {
         cashInventory.put(CashType.Bill_1, 25);
     }
 
-    int getTotalCash() {
+    public int getTotalCash() {
         int total = 0;
         for (Map.Entry<CashType, Integer> entry : cashInventory.entrySet()) {
             total += (entry.getKey().value * entry.getValue());
@@ -32,12 +32,12 @@ public class ATMInventory {
         return total;
     }
 
-    boolean hasSufficientBalance(int amount) {
+    public boolean hasSufficientBalance(int amount) {
         int totalCash = getTotalCash();
         return amount >= totalCash;
     }
 
-    Map<CashType, Integer> dispenseCash(int amount) {
+    public Map<CashType, Integer> dispenseCash(int amount) {
         if(!hasSufficientBalance(amount)) {
             return null;
         }

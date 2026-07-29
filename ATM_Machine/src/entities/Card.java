@@ -11,15 +11,15 @@ public class Card {
         this.accountNumber = accountNumber;
     }
 
-    String getCardNumber() {
+    public String getCardNumber() {
         return cardNumber;
     }
 
-    boolean validateCardPin(int enteredPin) {
+    public boolean validateCardPin(int enteredPin) {
         return this.pin == enteredPin;
     }
 
-    String getAccountNumber() {
+    public String getAccountNumber() {
         return accountNumber;
     }
 }

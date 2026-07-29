@@ -1,5 +1,7 @@
 package statePattern;
 
+import atm_context.ATMMachineContext;
+
 // Base ATM state interface
 public interface ATMState {
 
@@ -7,5 +9,5 @@ public interface ATMState {
     String getStateName();
 
 //    Method to handle ATM State transitions
-    ATMState next(ATMMachine context);
+    ATMState next(ATMMachineContext context);
 }
